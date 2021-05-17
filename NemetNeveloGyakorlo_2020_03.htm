@@ -1,0 +1,241 @@
+﻿<HTML>
+<head>
+<style> 
+input[type=text] {
+  padding: 11px 5px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  outline: none;
+  font-face: Arial;
+  font-size: 16px;
+}
+input[type=text]:focus {
+  background-color: lightyellow;
+}
+</style>
+
+<SCRIPT TYPE="text/javascript">
+var jo=new Array
+var rossz=new Array
+
+var szo=["Familie", "Urgroßvater", "Sohn", "Tochter", "Bruder", "Schwester", "Tante", "Onkel", "Kusine -lány unokatesó", "Cousin -fiú unokatesó", "Braut -menyasszony", "Gymnastikkurs", "Turm", "Wohnwagen", "Zelt", "Burg", "Bauernhof", "Hotel", "Hof", "Flur", "Toilette", "Dusche", "Dachboden", "Keller", "Abstellraum", "Tor", "Schrank", "Regal", "Bett", "Wand", "Bild", "Sessel", "Vase", "Knochen", "Plan", "Baumetarial", "Behörde", "Installateur", "Wasserleitung", "Stadt", "Dorf", "Luft", "Spielplatz", "Nachbarin", "Job", "Unternehmen", "Büro", "Theater", "Konzert", "Geschäft", "Konditorei", "Strauch", "Garten", "Pflanze"]
+
+var ne=["die", "der", "der", "die", "der", "die", "die", "der", "die", "der", "die", "der", "der", "der", "das", "die", "der", "das", "der", "die", "die", "die", "der", "der", "der", "das", "der", "das", "das", "die", "das", "der", "die", "der", "der", "das", "die", "der", "die", "die", "das", "die", "der", "die", "der", "das", "das", "das", "das", "das", "die", "der", "der", "die"]
+
+/* 54 db. Adatok le a Form-ba*/
+
+function kiir() {
+ x=Math.floor(Math.random()*54,99)
+ nos=szo[x]
+ document.f.kerdes0.value = nos
+ document.f.vel0.value = x
+ x=Math.floor(Math.random()*54,99)
+ nos=szo[x]
+ document.f.kerdes1.value = nos
+ document.f.vel1.value = x
+ x=Math.floor(Math.random()*54,99)
+ nos=szo[x]
+ document.f.kerdes2.value = nos
+ document.f.vel2.value = x
+ x=Math.floor(Math.random()*54,99)
+ nos=szo[x]
+ document.f.kerdes3.value = nos
+ document.f.vel3.value = x
+ x=Math.floor(Math.random()*54,99)
+ nos=szo[x]
+ document.f.kerdes4.value = nos
+ document.f.vel4.value = x
+ x=Math.floor(Math.random()*54,99)
+ nos=szo[x]
+ document.f.kerdes5.value = nos
+ document.f.vel5.value = x
+ x=Math.floor(Math.random()*54,99)
+ nos=szo[x]
+ document.f.kerdes6.value = nos
+ document.f.vel6.value = x
+ x=Math.floor(Math.random()*54,99)
+ nos=szo[x]
+ document.f.kerdes7.value = nos
+ document.f.vel7.value = x
+ x=Math.floor(Math.random()*54,99)
+ nos=szo[x]
+ document.f.kerdes8.value = nos
+ document.f.vel8.value = x
+ x=Math.floor(Math.random()*54,99)
+ nos=szo[x]
+ document.f.kerdes9.value = nos
+ document.f.vel9.value = x
+}
+
+function gyujt() {
+ /* Adatok vissza a Form-bol */
+ antwort=document.f.valasz0.value
+ x=document.f.vel0.value
+ if (antwort == ne[x])
+ {
+ /* ez megvaltoztatja a jo erteket */
+ j0=jo.push(ne[x]  + " " + szo[x]) 
+ }
+ else
+ {
+ r0=rossz.push(ne[x]  + " " + szo[x])  
+ }
+
+ antwort=document.f.valasz1.value
+ x=document.f.vel1.value
+ if (antwort == ne[x]) {
+ j2=jo.push(ne[x]  + " " + szo[x]) 
+ }
+ else {
+ r2=rossz.push(ne[x]  + " " + szo[x])  
+ }
+ 
+ antwort=document.f.valasz2.value
+ x=document.f.vel2.value
+ if (antwort == ne[x]) {
+ j2=jo.push(ne[x]  + " " + szo[x]) 
+ }
+ else {
+ r2=rossz.push(ne[x]  + " " + szo[x])  
+ }
+
+ antwort=document.f.valasz3.value
+ x=document.f.vel3.value
+ if (antwort == ne[x]) {
+ j2=jo.push(ne[x]  + " " + szo[x]) 
+ }
+ else {
+ r2=rossz.push(ne[x]  + " " + szo[x])  
+ }
+
+ antwort=document.f.valasz4.value
+ x=document.f.vel4.value
+ if (antwort == ne[x]) {
+ j2=jo.push(ne[x]  + " " + szo[x]) 
+ }
+ else {
+ r2=rossz.push(ne[x]  + " " + szo[x])  
+ }
+
+ antwort=document.f.valasz5.value
+ x=document.f.vel5.value
+ if (antwort == ne[x]) {
+ j2=jo.push(ne[x]  + " " + szo[x]) 
+ }
+ else {
+ r2=rossz.push(ne[x]  + " " + szo[x])  
+ }
+
+ antwort=document.f.valasz6.value
+ x=document.f.vel6.value
+ if (antwort == ne[x]) {
+ j2=jo.push(ne[x]  + " " + szo[x]) 
+ }
+ else {
+ r2=rossz.push(ne[x]  + " " + szo[x])  
+ }
+
+ antwort=document.f.valasz7.value
+ x=document.f.vel7.value
+ if (antwort == ne[x]) {
+ j2=jo.push(ne[x]  + " " + szo[x]) 
+ }
+ else {
+ r2=rossz.push(ne[x]  + " " + szo[x])  
+ }
+
+ antwort=document.f.valasz8.value
+ x=document.f.vel8.value
+ if (antwort == ne[x]) {
+ j2=jo.push(ne[x]  + " " + szo[x]) 
+ }
+ else {
+ r2=rossz.push(ne[x]  + " " + szo[x])  
+ }
+
+ antwort=document.f.valasz9.value
+ x=document.f.vel9.value
+ if (antwort == ne[x]) {
+ j2=jo.push(ne[x]  + " " + szo[x]) 
+ }
+ else {
+ r2=rossz.push(ne[x]  + " " + szo[x])  
+ }
+
+/*Kilistazas*/
+document.write("Jó megoldások: <br>")
+document.write("<ul><li>" + jo.join("</li><li>").fontcolor("#40dfb0") + "</li></ul>")
+
+document.write("Rossz próbálkozások helyesen: <br>")
+document.write("<ul><li>" + rossz.join("</li><li>").fontcolor("#cc3060").bold().fontsize(5) + "</li></ul>")
+document.write("<br><br><br><br><br><br>")
+
+/*Ertekeles*/
+switch(jo.length) {
+case 8:
+document.write(jo.length + " jó megoldás - " + ("Szép").fontcolor("#f98050").bold() + ("en ha").fontcolor("#ffea51").bold() + ("lad").fontcolor("#e0cc60").bold() + ("sz\!").fontcolor("#ff0026").bold())
+break
+case 9:
+document.write(jo.length + " jó megoldás - " + ("R").fontcolor("#da00c0").bold() + ("e").fontcolor("#da00d6").bold() + ("m").fontcolor("#da00f0").bold() + ("e").fontcolor("#ba50d0").bold() + ("k").fontcolor("#9a70c0").bold() + ("\!").fontcolor("#7a90c0").bold() + ("\!").fontcolor("#5aa0c0").bold() + ("\!").fontcolor("#3ac0c0").bold() + ("\!").fontcolor("#2ad0a7").bold() + ("\!").fontcolor("#1ae0a0").bold() + ("\!").fontcolor("#10f090").bold() + ("\!").fontcolor("#0af080").bold())
+break
+case 10:
+document.write(jo.length + " jó megoldás - " + ("F").fontcolor("#da00c0").bold() + ("a").fontcolor("#da00d6").bold() + ("n").fontcolor("#da00f0").bold() + ("t").fontcolor("#ba50d0").bold() + ("a").fontcolor("#9a70c0").bold() + ("sz").fontcolor("#7a90c0").bold() + ("t").fontcolor("#5aa0c0").bold() + ("i").fontcolor("#3ac0c0").bold() + ("k").fontcolor("#2ad0a7").bold() + ("u").fontcolor("#1ae0a0").bold() + ("s").fontcolor("#10f090").bold() + ("\!").fontcolor("#0af080").bold())
+break
+default:
+document.write(("<br><br><br>Lesz ez még").fontcolor("#5050ff").italics() + (" jobb ").fontcolor("#5090ff") + ("is\!").fontcolor("#5050ff").italics())
+}
+
+}
+
+</SCRIPT>
+</head>
+
+<BODY OnLoad="kiir()">
+<FONT face="Arial"  style='font-size:12.0pt; color:#0a0a4a' >
+<p>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Mi a szavak névelője?
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+<i>Érdemes lentről fölfelé kitölteni</i><br>
+
+<FORM NAME="f">
+
+<INPUT TYPE="text" NAME="vel0" SIZE="1" READONLY>
+<INPUT TYPE="text" NAME="kerdes0" SIZE="40" READONLY>
+<INPUT TYPE="text" NAME="valasz0"><br>
+<INPUT TYPE="text" NAME="vel1" SIZE="1" READONLY>
+<INPUT TYPE="text" NAME="kerdes1" SIZE="40" READONLY>
+<INPUT TYPE="text" NAME="valasz1"><br>
+<INPUT TYPE="text" NAME="vel2" SIZE="1" READONLY>
+<INPUT TYPE="text" NAME="kerdes2" SIZE="40" READONLY>
+<INPUT TYPE="text" NAME="valasz2"><br>
+<INPUT TYPE="text" NAME="vel3" SIZE="1" READONLY>
+<INPUT TYPE="text" NAME="kerdes3" SIZE="40" READONLY>
+<INPUT TYPE="text" NAME="valasz3"><br>
+<INPUT TYPE="text" NAME="vel4" SIZE="1" READONLY>
+<INPUT TYPE="text" NAME="kerdes4" SIZE="40" READONLY>
+<INPUT TYPE="text" NAME="valasz4"><br>
+<INPUT TYPE="text" NAME="vel5" SIZE="1" READONLY>
+<INPUT TYPE="text" NAME="kerdes5" SIZE="40" READONLY>
+<INPUT TYPE="text" NAME="valasz5"><br>
+<INPUT TYPE="text" NAME="vel6" SIZE="1" READONLY>
+<INPUT TYPE="text" NAME="kerdes6" SIZE="40" READONLY>
+<INPUT TYPE="text" NAME="valasz6"><br>
+<INPUT TYPE="text" NAME="vel7" SIZE="1" READONLY>
+<INPUT TYPE="text" NAME="kerdes7" SIZE="40" READONLY>
+<INPUT TYPE="text" NAME="valasz7"><br>
+<INPUT TYPE="text" NAME="vel8" SIZE="1" READONLY>
+<INPUT TYPE="text" NAME="kerdes8" SIZE="40" READONLY>
+<INPUT TYPE="text" NAME="valasz8"><br>
+<INPUT TYPE="text" NAME="vel9" SIZE="1" READONLY>
+<INPUT TYPE="text" NAME="kerdes9" SIZE="40" READONLY>
+<INPUT TYPE="text" NAME="valasz9"><br>
+<br>
+<input type="button" onclick="gyujt()" value="Kész">
+
+</form>
+
+</p>
+</font>
+</BODY>
+</HTML>
