@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Összeadás, kivonás</title>
+
+<style>
+ html {color: black; font-family:Arial; font-size: 16px;}
+ table {display: inline-block;}
+ th { border: 1px solid black;  text-align: center;} 
+ td { border: 0px; border-bottom:1px solid grey; text-align: center;}
+ tr:nth-child(even) {background-color: #f2f2f2;}
+ input { border: 0px; text-align: center; font-size: 18px; width: 100%;} 
+ tr:nth-child(even) input {background-color: #f2f2f2;}
+ button {font-family:Arial Black; font-size: 16px;}
+ #ossz {text-align:left;}
+
+
+#linkek { 
+vertical-align: top;
+display: inline-block;
+margin: 0 80px;
+border: 2px solid gray;
+padding: 0 50px;
+}
+
+#linkek p { 
+text-align:left;
+vertical-align: top;
+color: black; font-family:Arial; font-size: 16px;
+}
+
+#div2 {
+  display: inline-block;
+  width: 100px;
+  height: 90px;
+  position: relative;
+  border-radius: 15px 15px 55px 55px;
+  background-color: red;  /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, red, orange, yellow, indigo, violet); 
+  animation-name: second;
+  animation-duration: 7s;
+  animation-iteration-count: 3;
+  animation-direction: normal; 
+}
+@keyframes second {
+  0%   {left:0px; top:0px;}
+  20%  {left:100px; top:50px;}
+  40%  {left:200px; top:0px;}
+  50%  {left:200px; top:170px;}
+  80%  {left:20px; top:170px;}
+  100% {left:0px; top:0px;}   
+}
+#div4 {
+  display: inline-block;
+  width: 100px;
+  height: 90px;
+  position: relative;
+  border-radius: 15px 15px 55px 55px;
+  background-color: red;  /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, red, orange, yellow, indigo, violet); 
+  animation-name: fourth;
+  animation-duration: 4s;
+  animation-iteration-count: 5;
+  animation-direction: normal; 
+}
+@keyframes fourth {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:170px;}
+  75%  {left:0px; top:170px;}
+  100% {left:0px; top:0px;}   
+}
+#div5 {
+  display: inline-block;
+  width: 100px;
+  height: 90px;
+  position: relative;
+  border-radius: 15px 15px 55px 55px;
+  background-color: red;  /* For browsers that do not support gradients */
+  background-image: linear-gradient(20deg, red, orange, yellow, indigo, violet); 
+  animation-name: fifth;
+  animation-duration: 6s;
+  animation-iteration-count: 3;
+  animation-direction: reverse; 
+}
+@keyframes fifth {
+  0%   {left:0px; top:0px;}
+  25%  {left:100px; top:0px;}
+  50%  {left:150px; top:110px;}
+  75%  {left:40px; top:180px;}
+  100% {left:0px; top:0px;}   
+}
+#div1 {
+  display: inline-block;
+  width: 100px;
+  height: 90px;
+  position: relative;
+  border-radius: 15px 15px 55px 55px;
+  background-color: red;  /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, red, orange, yellow, indigo, violet);
+  animation-name: first;
+  animation-duration: 9s;
+  animation-iteration-count: 2;
+  animation-direction: normal; 
+}
+@keyframes first {
+   0%   {left:0px; top:0px;}
+  25%  {left:240px; top:20px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:40px; top:100px;}
+  100% {left:0px; top:0px;}    
+}
+.grid-container {
+  display: grid;
+  height: 400px;
+  justify-content: center;
+  grid-template-columns: 80px 80px 80px 80px 80px;
+  grid-gap: 50px;
+  background-color: #2196F3;
+  padding: 10px;
+  background-color: red;
+  background-image: linear-gradient(45deg, blue, indigo, green); 
+}
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<form id="form">
+<table>
+ <thead>
+   <tr>
+    <th width="70px">szám</th>
+    <th width="40px"> &nbsp &nbsp </th>
+    <th width="70px">szám</th>
+    <th width="40px"> &nbsp &nbsp </th>
+    <th width="200px">EREDMÉNY </th>
+    <th width="100px" height="32" id="StartContainer"> 
+      <button id="start" type="button"> Start </button></th>
+   </tr>
+ </thead>
+ <tbody id="kivon">
+ </tbody>
+ <tfoot>
+   <tr>
+    <td colspan="7" id="ossz"> <b>összesítés: &nbsp <span id="osszesito">.. </span></b> &nbsp jó válasz. Eddig összesen <span id="hanyaik">.. </span> kérdésből.  &nbsp  &nbsp <span id="gratula"> </span></td>
+   </tr>
+ </tfoot>
+</table>
+
+<div id="linkek">
+ <p><a href="szamolos_oszt.html"><button type="button"> Osztás : </button></a></p>
+ <p><a href="szamolos_szor.html"><button type="button">  Szorzás • </button></a></p>
+</div>
+</form>
+
+<div id="pe" style="display:none">
+<div id="div0" class="grid-container">
+<div id="div2">  <b>B</b> </div>
+<div id="div1">  <b>R</b> </div>
+<div id="div4">  <b>A</b> </div>
+<div id="div5">  <b>V</b> </div>
+<div id="div2">  <b>Ó</b> </div>
+</div>
+</div>
+
+<!-- * - * - * Innen JavaScript * - * - * - * - * - * - //-->
+
+<script>
+let korok = 1;
+let i = 0;
+let osszegzo=0;
+let att = ["sz1","muv","sz2","egyenlo","tipp","ready"];
+let wi = ["70px","40px","70px","40px","200px","80px"];
+let body = document.getElementById("kivon");
+
+var sz1=0;
+var sz2=0;
+var e=0;
+var muv = "+";
+var v;
+
+
+let szamol = function(k){
+  sz1=Math.floor(Math.random()*107);
+  sz2=Math.floor(Math.random()*107);
+  e=Math.random();
+  muv = (e < 0.90 && sz1 >= sz2) ? "-" : "+";
+}
+
+
+let crTr = function(){
+  let tr = document.createElement("tr");
+  for (let k in att){
+    let td = document.createElement("td");
+    td.setAttribute("width",wi[k]);
+    let inp = document.createElement("input");
+    inp.setAttribute("width",wi[k]);
+    if (att[k] !="ready"){
+      inp.setAttribute("name",att[k]);
+      inp.setAttribute("type","text");
+      inp.setAttribute("value",ertek(k));
+      if (att[k] !="tipp"){
+        inp.setAttribute("readonly",true);
+      };
+      td.appendChild(inp);
+    }else{
+      bu = document.createElement("button");
+      bu.innerHTML = "<b>Kész</b>";
+      bu.setAttribute("type","submit");
+      bu.setAttribute("onClick","kiertekel(event)");
+      td.appendChild(bu);
+    };
+    tr.appendChild(td);
+  }
+body.appendChild(tr);
+}
+
+
+let crTrHivo = function(){
+ let StartContainer = document.getElementById("StartContainer");
+ StartContainer.innerHTML="Hajrá!";
+ crTr();
+}
+
+
+let startBtn = document.getElementById("start");
+startBtn.addEventListener("click",crTrHivo);
+
+ 
+let ertek = function(k){
+  if (k == 0){szamol()};
+  if (k == 0){ v = sz1};
+  if (k == 1){ v = muv};
+  if (k == 2){ v = sz2};
+  if (k == 3){ v = "="};
+  if (k == 4 || k ==5){ v =""};
+  return v;
+}
+
+
+let kiertekel = function(event){
+  let tr = document.querySelector("#kivon").lastElementChild;
+  let helyesEredmeny = (muv == "+") ? sz1+sz2 : sz1-sz2;
+  let tipi = tr.querySelector("input[name=tipp]").value;
+  let smile = tr.lastElementChild;
+  smile.innerHTML = (tipi == helyesEredmeny) ? "<b>;-)</b>" : "¦-(";
+  osszegzo = (tipi == helyesEredmeny) ? osszegzo+1 : osszegzo; 
+  osszesito = document.querySelector("#osszesito");
+  osszesito.innerHTML=osszegzo;
+  hanyaik = document.querySelector("#hanyaik");
+  hanyaik.innerHTML=i+1;
+
+  setTimeout(function(){
+    if (i < korok){
+      i++;
+      crTr();
+    }else{ 
+      grafika(osszegzo);
+    }
+  }, 1);
+}
+
+<!-- kész: meghívom egy ideig a kiértékelést, aztän full ptszámnál jutalom következik, majd ujatölt az oldal - - - nincs kész, (kis serleg ha 1 hiba?).  //-->
+
+let grafika = function(osszegzo){
+  if (osszegzo == i+1) {
+    gratula = document.querySelector("#gratula");
+    gratula.innerHTML= "Gratulálok!";
+    setTimeout(function(){
+      document.getElementById("form").style.display="none";
+      document.querySelector("#pe").style.display="block"; 
+    }, 2000); 
+    setTimeout(function(){
+      document.getElementById("form").style.display="block";
+      document.querySelector("#pe").style.display="none"; 
+      document.location.reload(true);  
+    }, 24000); 
+  }else{
+    let tr = document.createElement("tr");
+    let td = document.createElement("td");
+    td.setAttribute("colspan", "7");
+    td.innerHTML = "<b>Nem volt minden megoldás jó &nbsp &nbsp &nbsp <b>:-(</b>";
+    tr.appendChild(td);
+    body.appendChild(tr);
+    setTimeout(function(){
+      document.location.reload(true);  
+    }, 5000); 
+  }
+}
+</script>
+</body>
+</html>

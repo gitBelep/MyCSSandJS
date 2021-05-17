@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>szinesek B</title>
+
+<style>
+div{
+  display: inline-block;
+  margin: 1px;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+}
+
+.div0 { background-image: linear-gradient(to right, red, orange, indigo, violet);}
+.div1 { background-image: linear-gradient(170deg, yellow, red, violet);}
+.div2 { background-image: linear-gradient(45deg, green, yellow, indigo, violet);}
+.div3 { background-image: linear-gradient(to right, red, orange, yellow);}
+.div4 { background-image: linear-gradient(90deg, red, yellow, blue);}
+.div5 { background-image: linear-gradient(to right, red, orange, yellow);}
+.div6 { background-image: linear-gradient(135deg, red, white, yellow);}
+.div7 { background-image: linear-gradient(45deg, blue, orange, blue);}
+.div8 { background-image: linear-gradient(125deg, red, orange, yellow);}
+.div9 { background-image: linear-gradient(45deg, red, blue, indigo);}
+.div10 { background-image: linear-gradient(80deg, green, purple, yellow);}
+.div11 { background-image: linear-gradient(160deg, black, yellow, black, yellow);}
+</style>
+</head>
+
+<body>
+
+<p id="p0">
+</p>
+
+<!-- * - * - * Innen JavaScript * - * - * - * - * - * - //-->
+<script>
+
+let keret = document.querySelector("#p0");
+let k,m=0;
+for (let i=0; i<1200; i++) {
+ let kocka = document.createElement("div");
+ m=parseInt(Math.floor(Math.random()*11,99));
+ kocka.setAttribute("class","div"+m);
+ keret.appendChild(kocka);
+}
+
+</script>
+
+</body>
+</html>

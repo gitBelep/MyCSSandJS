@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#div2 {
+  width: 100px;
+  height: 90px;
+  position: relative;
+  border-radius: 15px 15px 55px 55px;
+  background-color: red; 
+  background-image: linear-gradient(to right, red, orange, yellow, indigo, violet); 
+  animation-name: second;
+  animation-delay: 2s;
+  animation-duration: 7s;
+  animation-iteration-count: 4;
+  animation-direction: normal; 
+}
+@keyframes second {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:170px;}
+  75%  {left:0px; top:170px;}
+  100% {left:0px; top:0px;}   
+}
+#div4 {
+  width: 100px;
+  height: 90px;
+  position: relative;
+  border-radius: 15px 15px 55px 55px;
+  background-color: red;
+  background-image: linear-gradient(to right, red, orange, yellow, indigo, violet); 
+  animation-delay: 2s;
+  animation-name: fourth;
+  animation-duration: 4s;
+  animation-iteration-count: 7;
+  animation-direction: normal; 
+}
+@keyframes fourth {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:170px;}
+  75%  {left:0px; top:170px;}
+  100% {left:0px; top:0px;}   
+}
+#div5 {
+  width: 100px;
+  height: 90px;
+  position: relative;
+  border-radius: 15px 15px 55px 55px;
+  background-color: red;
+  background-image: linear-gradient(20deg, red, orange, yellow, indigo, violet); 
+  animation-name: fifth;
+  animation-delay: 2s;
+  animation-duration: 6s;
+  animation-iteration-count: 4;
+  animation-direction: reverse; 
+}
+@keyframes fifth {
+  0%   {left:0px; top:0px;}
+  25%  {left:100px; top:0px;}
+  50%  {left:150px; top:110px;}
+  75%  {left:40px; top:180px;}
+  100% {left:0px; top:0px;}   
+}
+#div1 {
+ width: 100px;
+  height: 90px;
+  position: relative;
+  border-radius: 15px 15px 55px 55px;
+  background-color: red;
+  background-image: linear-gradient(10deg, red, orange, yellow, indigo, violet);
+  animation-name: first;
+  animation-delay: 2s;
+  animation-duration: 9s;
+  animation-iteration-count: 3;
+  animation-direction: normal; 
+}
+@keyframes first {
+   0%   {left:0px; top:0px;}
+  25%  {left:240px; top:20px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:40px; top:100px;}
+  100% {left:0px; top:0px;}    
+}
+.grid-container {
+  display: grid;
+  width: 99%;
+  height: 400px;
+  justify-content: center;
+  grid-template-columns: 80px 80px 80px 80px 80px;
+  grid-gap: 50px;
+  background-color: #2196F3;
+  padding: 10px;
+  background-color: red;
+  background-image: linear-gradient(55deg, pink, indigo, blue, indigo, pink); 
+  transition: width 3s, height 3s;
+}
+div:hover {
+  width: 80%;
+  height: 490px;
+}
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 40px;
+  font-face: Arial;
+}
+p {
+  color: #444444;
+  font-size:40px;
+  font-face: Arial;
+  text-shadow: 2px 2px 5px red;
+}
+p:hover {
+  color: black;
+  text-shadow: 2px 2px 5px blue;
+}
+
+</style>
+</head> 
+
+<body>
+<div id="div0" class="grid-container">
+ <div id="div2"><b>M</b></div>
+ <div id="div1"><b>♪</b></div>
+ <div id="div4"><b>Ű</b></div>
+ <div id="div5"><b>Á</b></div>
+ <div id="div2"> ♥ </div>
+</div>
+<p>  &nbsp <br> &nbsp Mozgasd az egeret!</p>
+</body>
+</html>

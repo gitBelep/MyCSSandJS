@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- kész: meghívom egy ideig a kiértékelést, aztän full ptszámnál jutalom következik, majd ujatölt az oldal - - - nincs kész, (kis serleg ha 1 hiba?). //-->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Maradékos osztás</title>
+
+<style>
+ html {color: black; font-family:Arial; font-size: 16px;}
+ table {display: inline-block;}
+ th { border: 1px solid black;  text-align: center;} 
+ td { border: 0px; border-bottom:1px solid grey; text-align: center;}
+ tr:nth-child(even) {background-color: #f2f2f2;}
+ input { border: 0px; text-align: center; font-size: 18px; width: 100%;} 
+ tr:nth-child(even) input {background-color: #f2f2f2;}
+ button {font-family:Arial Black; font-size: 16px;}
+ #ossz {text-align:left;}
+
+#div0 {
+  background-color: red;
+  background-image: linear-gradient(45deg, blue, indigo, violet, green);
+  display: inline-block;
+  width: 880px;
+  height:400px;
+}
+
+
+#linkek { 
+vertical-align: top;
+display: inline-block;
+margin: 0 80px;
+border: 2px solid gray;
+padding: 0 50px;
+}
+
+#linkek p { 
+text-align:left;
+vertical-align: top;
+color: black; font-family:Arial; font-size: 16px;
+}
+
+.div4 {
+  width: 70px;
+  height: 70px;
+  border: 1px solid black; 
+  background-color: green;
+  transform: rotateZ(50deg);
+  display: inline-block;  
+  position: relative;
+  left: 10px;
+  top: -34px;
+}
+
+#animated_div {
+ width:75px;
+ height:50px;
+ color: #ffffff;
+ position: relative;
+ top: 60px;
+ font-weight:bold;
+ font-size:20px;
+ padding:10px;
+ animation:animated_div 7s infinite;
+ -moz-animation:animated_div 7s  infinite;
+ -webkit-animation:animated_div 7s  infinite;
+ border-radius:5px;
+ -webkit-border-radius:5px;
+}
+@keyframes animated_div {
+ 0%   {transform: rotate(0deg); left:-150px; background: #c2f1f1;}
+ 20%  {transform: rotate(20deg);left:0px;}
+ 45%  {transform: rotate(0deg); left:500px;}
+ 50%  {transform: rotate(0deg); left:500px;}
+ 60%  {transform: rotate(0deg); left:500px; background:#1e22e6;}
+ 80%  {transform: rotate(-360deg);left:-150px;}
+ 100% {transform: rotate(-360deg);left:-150px;}
+}
+
+.div2 {
+ width:40px;
+ height:40px;
+ position: relative;
+ display: block;  
+ color: #ff3333;
+ position: relative;
+ top: 100px;
+ font-weight:bold;
+ font-size:30px;
+ padding:10px; 
+ animation:animated_div2 5s infinite;
+ -moz-animation:animated_div2 5s  infinite;
+ -webkit-animation:animated_div2 5s  infinite;
+ border-radius:5px;
+ -webkit-border-radius:5px;
+}
+@keyframes animated_div2 {
+ 0%   {transform: rotate(0deg); left:-150px; background:#92e991;}
+ 20%  {transform: rotate(20deg);left:0px;}
+ 45%  {transform: rotate(50deg); left:500px; background:#1ec7e6;}
+ 50%  {transform: rotate(40deg); left:500px;}
+ 60%  {transform: rotate(90deg); left:500px; background:#ffc7e6;}
+ 80%  {transform: rotate(-360deg);left:-150px;}
+ 100% {transform: rotate(-360deg);left:-150px;}
+}
+
+.div6 {
+ width:50px;
+ height:50px;
+ position: relative;
+ display: block;  
+ color: #ffff33;
+ position: relative;
+ top: 100px;
+ font-weight:bold;
+ font-size:24px;
+ padding:10px;
+ animation:animated_div6 4s infinite;
+ -moz-animation:animated_div6 4s  infinite;
+ -webkit-animation:animated_div6 4s  infinite;
+}
+@keyframes animated_div6 {
+ 0%   {transform: rotate(0deg); left:-150px;}
+ 20%  {transform: rotate(20deg);left:0px;background: #121991;}
+ 45%  {transform: rotate(50deg); left:500px;}
+ 50%  {transform: rotate(40deg); left:500px;}
+ 60%  {transform: rotate(90deg); left:500px; background:#1ef7e6;}
+ 80%  {transform: rotate(350deg);left:-150px;}
+ 100% {transform: rotate(360deg);left:-150px;}
+}
+
+.div7 {
+ width:40px;
+ height:40px;
+ position: relative;
+ display: block;  
+ color: #6060ff;
+ position: relative;
+ top: 100px;
+ font-weight:bold;
+ font-size:30px;
+ padding:10px;
+ animation:animated_div7 5s infinite;
+ -moz-animation:animated_div7 5s  infinite;
+ -webkit-animation:animated_div7 5s  infinite;
+ border-radius:5px;
+ -webkit-border-radius:5px;
+}
+@keyframes animated_div7 {
+ 0%   {transform: rotate(0deg); left:-150px; background:#ffbb41;}
+ 20%  {transform: rotate(20deg);left:0px;}
+ 45%  {transform: rotate(50deg); left:500px; background:#ff4445;}
+ 50%  {transform: rotate(40deg); left:500px;}
+ 60%  {transform: rotate(90deg); left:500px; background:#ff97e0;}
+ 80%  {transform: rotate(-360deg);left:-150px;}
+ 100% {transform: rotate(-360deg);left:-150px;}
+}
+
+.divserleg {
+ width:40px;
+ height:40px;
+ position: relative;
+ display: inline-block;  
+ animation: animated_divserleg 5s 1;
+ animation-timing-function: ease-in-out; 
+ animation-fill-mode: forwards;
+ -moz-animation:animated_divserleg 5s 1;
+ -webkit-animation:animated_divserleg 5s 1;
+ border-radius:5px;
+ -webkit-border-radius:5px;
+}
+@keyframes animated_divserleg {
+ 0%   {transform: rotate(0deg); left:-150px; top:0px;}
+ 75%  {transform: rotate(40deg); left:440px; top:30px;}
+ 95%  {transform: rotate(-80deg); left:420px; top:160px;}
+ 100% {transform: rotate(-83deg); left:418px; top:165px;}
+}
+
+#kep {
+position: absolute;
+padding-left: 505px;
+}
+
+p{
+  text-align: center;
+  font-size: 28px;
+  font-face: Arial;
+}
+
+</style>
+
+</head>
+
+<body>
+<form id="form">
+<table>
+ <thead>
+   <tr>
+    <th width="70px">szám</th>
+    <th width="30px"> &nbsp &nbsp </th>
+    <th width="70px">szám</th>
+    <th width="30px"> &nbsp &nbsp </th>
+    <th width="150px">EREDMÉNY </th>
+    <th width="30px"> &nbsp </th>
+    <th width="100px">MARADÉK </th>
+    <th width="80px" height="32" id="StartContainer"> 
+      <button id="start" type="button"> Start </button></th>
+   </tr>
+ </thead>
+ <tbody id="oszt">
+ </tbody>
+ <tfoot>
+   <tr>
+    <td colspan="7" id="ossz"> <b>összesítés: &nbsp <span id="osszesito">.. </span></b> &nbsp jó válasz. Eddig összesen <span id="hanyaik">.. </span> kérdésből.  &nbsp  &nbsp <span id="gratula"> </span></td>
+   </tr>
+ </tfoot>
+</table>
+
+<div id="linkek">
+ <p><a href="szamolos_szor.html"><button type="button">  Szorzás • </button></a></p>
+ <p><a href="szamolos_+-.html"><button type="button"> Összeadás, kivonás +- </button></a></p>
+</div>
+</form>
+
+<div id="pe" style="display:none">
+<div id="div0">
+ <div id="animated_div"> Bravó<br> Szuper</div>
+ <div class="div7"> ♫ </div>
+ <div class="div6"> ☼ </div>
+ <div class="div2"> ♥ </div>
+</div>
+
+<div id="div1">
+</div>
+
+<div>
+  <div>
+    <img id="kep" src="kincseslada-k414x426.png" width="207"> 
+    <div class="divserleg"> <img width="63" src="serleg-k126x186.png"> </div>  
+  </div>
+</div>
+</div>
+
+<!-- * - * - * Innen JavaScript * - * - * - * - * - * - //-->
+
+<script>
+let i = 0;
+let korok = 1;
+let osszegzo=0;
+let att = ["sz1","muv","oszto","egyenlo","tipp1","r","tipp2","ready"];
+let wi = ["70px","30px","70px","30px","150px","30px","100px","80px"];
+let body = document.getElementById("oszt");
+
+var sz1=0;
+var oszto=0;
+var eredm=0;
+var r=0;
+var v;
+
+
+let szamol = function(k){
+  eredm=Math.floor(Math.random()*11,4);
+  oszto=Math.floor(Math.random()*11,4);
+  let ee = (i % 2 ==0) ? 7 : 8;
+  oszto = (oszto <=1) ? ee : oszto;
+  r=Math.floor(Math.random() * (oszto) );
+  sz1 = oszto * eredm + r
+}
+
+
+let crTr = function(){
+  let tr = document.createElement("tr");
+  for (let k in att){
+    let td = document.createElement("td");
+    td.setAttribute("width",wi[k]);
+    let inp = document.createElement("input");
+    inp.setAttribute("width",wi[k]);
+    if (att[k] !="ready"){
+      inp.setAttribute("name",att[k]);
+      inp.setAttribute("type","text");
+      inp.setAttribute("value",ertek(k));
+      if (att[k] != "tipp1" && att[k] !="tipp2"){
+        inp.setAttribute("readonly",true);
+      };
+      td.appendChild(inp);
+    }else{
+      bu = document.createElement("button");
+      bu.innerHTML = "<b>Kész</b>";
+      bu.setAttribute("type","submit");
+      bu.setAttribute("onClick","kiertekel(event)");
+      td.appendChild(bu);
+    };
+    tr.appendChild(td);
+  }
+body.appendChild(tr);
+}
+
+
+let crTrHivo = function(){
+ let StartContainer = document.getElementById("StartContainer");
+ StartContainer.innerHTML="Hajrá!";
+ crTr();
+}
+
+
+let startBtn = document.getElementById("start");
+startBtn.addEventListener("click",crTrHivo);
+
+ 
+let ertek = function(k){
+  if (k == 0){szamol()};
+  if (k == 0){ v = sz1};
+  if (k == 1){ v = ":"};
+  if (k == 2){ v = oszto};
+  if (k == 3){ v = "="};
+  if (k == 5){ v ="R"};
+  if (k == 4 || k == 6 || k == 7){ v =""};
+  return v;
+}
+
+
+let kiertekel = function(event){
+  let tr = document.querySelector("#oszt").lastElementChild;
+  let tipi1 = tr.querySelector("input[name=tipp1]").value;
+  let tipi2 = tr.querySelector("input[name=tipp2]").value;
+  let smile = tr.lastElementChild;
+  smile.innerHTML = (tipi1 == eredm && tipi2 == r ) ? "<b>;-)</b>" : "¦-(";
+  osszegzo = (tipi1 == eredm && tipi2 == r ) ? osszegzo+1 : osszegzo;
+  osszesito = document.querySelector("#osszesito");
+  osszesito.innerHTML=osszegzo;
+  hanyaik = document.querySelector("#hanyaik");
+  hanyaik.innerHTML=i+1;
+
+  setTimeout(function(){
+    if (i < korok){
+      i++;
+      crTr();
+    }else{ 
+      grafika(osszegzo);
+    }
+  }, 1);
+}
+
+let grafika = function(osszegzo){
+  if (osszegzo == i+1) {
+    gratula = document.querySelector("#gratula");
+    gratula.innerHTML= "Gratulálok!";
+    setTimeout(function(){
+      document.getElementById("form").style.display="none";
+      document.querySelector("#pe").style.display="block";
+let parnt1 = document.querySelector("#div1");
+for (let i=0; i<12; i++){
+ let rombusz = document.createElement("div");
+ rombusz.className ="div4";
+ let pb = document.createElement("p");
+ pb.innerHTML = "♪";
+ rombusz.appendChild(pb);
+ parnt1.appendChild(rombusz);
+}
+    }, 2000); 
+    setTimeout(function(){
+      document.getElementById("form").style.display="block";
+      document.querySelector("#pe").style.display="none"; 
+      document.location.reload(true);  
+    }, 20000); 
+  }else{
+    let tr = document.createElement("tr");
+    let td = document.createElement("td");
+    td.setAttribute("colspan", "8");
+    td.innerHTML = "<b>Nem volt minden megoldás jó &nbsp &nbsp &nbsp <b>:-(</b>";
+    tr.appendChild(td);
+    body.appendChild(tr);
+    setTimeout(function(){
+      document.location.reload(true);  
+    }, 5000); 
+  }
+}
+</script>
+
+</body>
+</html>
